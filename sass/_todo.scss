@@ -1,0 +1,84 @@
+body{
+    background-color: rgb(245, 244, 244);
+}
+.btn{
+    cursor: pointer;
+    padding: 0.5em 1.5em;
+    border: none;
+    color: white;
+    white-space: nowrap;
+    &:active{
+        transform: translateY(1px);
+    }
+}
+.btn-solid-blue{
+    @extend .btn;
+    background-color: #8db0b7;
+    &:hover{
+        background-color: #81adb6;
+    }
+
+}
+.btn-solid-coral{
+    @extend .btn;
+    background-color: #ce8272;
+    &:hover{
+        background-color: #d16d58;
+    }
+
+}
+
+.todo{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    align-items: center;
+    gap: 25px;
+    h1{
+        color: #30343a;
+    }
+    .input-field{
+        width: 40%;
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        input{
+
+            width: 100%;
+            outline: none;
+            border: none;
+            padding: 0.4em;
+            box-shadow:0 0 5pt 0.5p #D3D3D3;
+            &:focus{
+                outline: 2px solid #8db0b7;
+            }
+
+        }
+
+    }
+    ul{
+        width: 30%;
+        padding: 0;
+    }
+    li{
+        margin: 10px;
+        padding: 15px;
+        list-style-type: none;
+        display: flex;
+        justify-content: space-between;
+        box-shadow: 0 10px 10px -10px #d8e4e7;
+        button{
+            cursor: pointer;
+            border: none;
+            background-color: #ce8272;
+            color: white;
+            border-radius: 50%;
+            &:hover{
+                background-color:#d16d58;
+        
+            }
+
+        }
+    }
+
+}
